@@ -10,10 +10,10 @@
  *
  * @wordpress-theme
  *
- * Theme Name:          Extra ALl NL
+ * Theme Name:          Extra ALL NL
  * Theme URI:           http://www.timrussell.com/wordpress-themes/
  * Description:         Basic child theme, with no header logo image. Based off the Extra theme from <a href="http://www.elegantthemes.com/gallery/extra/">Elegant Themes</a>
- * Version:             20160512.1
+ * Version:             20160914.1
  * Author:              Tim Russell
  * Author URI:          http://timrussell.com/wordpress-themes/
  * License:             GPL-2.0+
@@ -54,7 +54,9 @@
  * **********************************************************************
 */
 @import url("../Extra/style.css");
-
 /* =Child Theme customization starts here
 -------------------------------------------------------------- */
-
+@import url("css/style-extra.css");
+@import url("css/style-plugin-roresources.css");
+/* @import url("css/style-plugin-contactform7.css"); */
+@import url("css/style-plugin-loginwidget.css");

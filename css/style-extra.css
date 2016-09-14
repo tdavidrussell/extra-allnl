@@ -1,0 +1,36 @@
+/**
+ * All the primary changes for Extra Themes
+ * also look at other style-extra-<name> for other style settings
+ */
+
+#site-title {
+    font-family: 'Open Sans', Arial, sans-serif !important;
+    color: #FFF;
+    font-size: 26px;
+    font-weight: bold;
+    min-width: 35% !important;
+}
+
+.logo {
+    padding-top: 1.2em;
+    display: inline-block;
+    clear: both;
+}
+
+/** fix jamming title to top on wrapper (box)**/
+.posts-blog-feed-module.masonry .post-content {
+    padding: 20px 20px 10px 20px;
+}
+
+/* 768px Breakpoint */
+@media only screen and (max-width: 768px) {
+    /** change font to adjust for narrow screen **/
+    #site-title {
+        font-size: 18px;
+    }
+
+    .logo {
+        padding-top: .8em;
+    }
+
+}

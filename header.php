@@ -25,7 +25,6 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( $template_directory_uri . '/scripts/ext/html5.js"' ); ?>" type="text/javascript"></script>
 	<![endif]-->
-
 	<script type="text/javascript">
 		document.documentElement.className = 'js';
 	</script>
@@ -154,8 +153,14 @@
 						?>
 
 						<!-- Logo -->
+						<!-- https://www.elegantthemes.com/blog/community/divi-nation-short-3-super-simple-divi-header-modifications -->
+
 						<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" data-fixed-height="<?php echo esc_attr( et_get_option( 'fixed_nav_logo_height', '51' ) ); ?>">
+							<span id="site-title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span>
+
+							<!--
 							<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo"/>
+							-->
 						</a>
 
 						<?php
