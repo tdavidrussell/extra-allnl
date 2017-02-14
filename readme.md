@@ -45,4 +45,3 @@ Read the Codex for more information about [installing theme manually](https://co
 ## Changelog
 
 See [CHANGELOG](changelog.md).
-gelog.md).
