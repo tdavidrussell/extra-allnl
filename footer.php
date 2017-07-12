@@ -41,7 +41,7 @@
 								<?php $social_icon_url = et_get_option( sprintf( '%s_url', $social_icon ), '' ); ?>
 								<?php if ( '' != $social_icon_url ) { ?>
                                     <li class="et-extra-social-icon <?php echo $social_icon; ?>">
-                                        <a href="<?php echo esc_url( $social_icon_url ); ?>" class="et-extra-icon et-extra-icon-background-none et-extra-icon-<?php echo $social_icon; ?>"></a>
+                                        <a href="<?php echo esc_url( $social_icon_url ); ?>" class="et-extra-icon et-extra-icon-background-none et-extra-icon-<?php echo $social_icon; ?>" target="_blank"></a>
                                     </li>
 								<?php } ?>
 							<?php } ?>
