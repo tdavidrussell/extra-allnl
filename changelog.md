@@ -1,5 +1,8 @@
 ## Changelog
 
+#### 20180416.1
+* Tested with 4.9
+
 #### 20170712.1
 Tested: 4.8
 Added: social links now open in new tab

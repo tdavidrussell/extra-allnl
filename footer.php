@@ -13,7 +13,7 @@
         <div class="container">
 
             <!-- Footer Info -->
-            <p id="footer-info">Copyright &copy <?php echo date( "Y" ) ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> | <em>Website by <a target="_blank" title="Tim Russell" href="http://timrussell.com">Tim Russell</a></em></p>
+            <p id="footer-info">Copyright &copy <?php echo date( "Y" ) ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 
             <!-- Footer Navigation -->
 			<?php if ( has_nav_menu( 'footer-menu' ) || false !== et_get_option( 'show_footer_social_icons', true ) ) { ?>

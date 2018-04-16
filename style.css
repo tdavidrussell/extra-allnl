@@ -5,7 +5,7 @@
  * @author              Tim Russell <githubber@timrussell.com>
  * @author              Tim Russell <tim@timrussell.com>
  * @license             GPL-2.0+
- * @link                http://timrussell.com
+ * @link                https://timrussell.com
  * @copyright           Copyright: (c) 2014-2016 Raging One.
  *
  * @wordpress-theme
@@ -13,9 +13,9 @@
  * Theme Name:          Extra ALL NL
  * Theme URI:           http://www.timrussell.com/wordpress/
  * Description:         Basic child theme, with no header logo image. Based off the Extra theme from <a href="http://www.elegantthemes.com/gallery/extra/">Elegant Themes</a>
- * Version:             20170712.1
+ * Version:             20180416.1
  * Author:              Tim Russell
- * Author URI:          http://timrussell.com/wordpress/
+ * Author URI:          https://timrussell.com/wordpress/
  * License:             GPL-2.0+
  * License URI:         http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:         extra-allnl
@@ -29,11 +29,11 @@
  *
  * Template:            Extra
  *
- * Requires WP:         4.4
+ * Requires WP:         4.8
  * Requires PHP:        5.3
  *
- * Support URI:         http://timrussell.com/wordpress/
- * Documentation URI:   http://timrussell.com/wordpress/
+ * Support URI:         https://timrussell.com/wordpress/
+ * Documentation URI:   https://timrussell.com/wordpress/
  *
  * Released under the GPL license
  * http://www.opensource.org/licenses/gpl-license.php
@@ -60,3 +60,16 @@
 @import url("css/style-plugin-roresources.css");
 /* @import url("css/style-plugin-contactform7.css"); */
 @import url("css/style-plugin-loginwidget.css");
+
+/** start block -> stop forcing width of featured images **/
+.post-thumbnail img {
+    display: block;
+    width: auto;
+    margin: auto;
+}
+img {
+    display: block;
+    width: auto;
+    margin: auto;
+}
+/** stop block -> stop forcing width of featured images **/
