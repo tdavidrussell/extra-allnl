@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ROEXALLNL_VERSION', '20180416.1' );
+define( 'ROEXALLNL_VERSION', '20181012.1' );
 define( 'ROEXALLNL_CDIR', get_stylesheet_directory() ); // if child, will be the file path, with out backslash
 define( 'ROEXALLNL_CURI', get_stylesheet_uri() ); // URL to the theme directory, not back slash
 
@@ -156,9 +156,9 @@ function sj_et_builder_post_types( $post_types ) {
 add_filter( 'et_builder_post_types', 'sj_et_builder_post_types' );
 
 /* change the image quality on resizing .... */
-add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
-
-
+add_filter( 'jpeg_quality', function ( $arg ) {
+	return 100;
+} );
 /**
  * for the RO Resources Plugin
  */
@@ -190,7 +190,7 @@ if ( ! function_exists( 'et_pb_resources_meta_box' ) ) :
 endif;
 
 
-/** Removes the WordPress logo on ther user side. */
+/** Removes the WordPress logo on the user side. */
 add_action( 'admin_bar_menu', 'ro_remove_wp_logo', 9999 );
 
 function ro_remove_wp_logo( $wp_admin_bar ) {

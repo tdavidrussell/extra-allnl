@@ -32,7 +32,12 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div id="page-container">
+<?php
+	if ( et_builder_is_product_tour_enabled() ) {
+		return;
+	}
+?>
+	<div id="page-container" class="page-container">
 	<?php $header_vars = extra_get_header_vars(); ?>
 	<!-- Header -->
 	<header class="header <?php echo $header_vars['header_classes']; ?>">
@@ -107,9 +112,9 @@
 								<?php foreach ( $social_icons as $social_icon => $social_icon_title ) { ?>
 									<?php $social_icon = esc_attr( $social_icon ); ?>
 									<?php $social_icon_url = et_get_option( sprintf( '%s_url', $social_icon ), '' ); ?>
-									<?php if ( '' != $social_icon_url ) { ?>
-										<li>
-											<a href="<?php echo esc_url( $social_icon_url ); ?>" class="et-extra-icon et-extra-icon-background-hover et-extra-icon-<?php echo $social_icon; ?>" target="_blank"></a>
+								<?php if ( '' != $social_icon_url && 'on' === et_get_option( "show_{$social_icon}_icon", 'on' ) ) { ?>
+								<li class="et-extra-social-icon <?php echo $social_icon; ?>">
+									<a href="<?php echo esc_url( $social_icon_url ); ?>" class="et-extra-icon et-extra-icon-background-hover et-extra-icon-<?php echo $social_icon; ?>" target="_blank"></a>
 										</li>
 									<?php } ?>
 								<?php } ?>
@@ -137,7 +142,7 @@
 
 		<!-- Main Header -->
 		<div id="main-header-wrapper">
-			<div id="main-header" data-fixed-height="<?php echo esc_attr( et_get_option( 'fixed_nav_height', '124' ) ); ?>">
+				<div id="main-header" data-fixed-height="<?php echo esc_attr( et_get_option( 'fixed_nav_height', '80' ) ); ?>">
 				<div class="container">
 					<!-- ET Ad -->
 					<?php if ( ! empty( $header_vars['header_ad'] ) ) { ?>
@@ -182,7 +187,7 @@
 							'theme_location'            => 'primary-menu',
 							'container'                 => '',
 							'fallback_cb'               => '',
-							'menu_class'                => 'nav',
+								'menu_class'                => $menu_class,
 							'menu_id'                   => 'et-menu',
 							'echo'                      => false,
 							'walker'                    => new Extra_Walker_Nav_Menu,
@@ -194,9 +199,7 @@
 							?>
 							<ul id="et-menu" class="<?php echo esc_attr( $menu_class ); ?>">
 								<?php if ( 'on' == et_get_option( 'extra_home_link' ) ) { ?>
-									<li <?php if ( is_home() ) {
-										echo 'class="current_page_item"';
-									} ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'extra' ); ?></a></li>
+										<li <?php if ( is_home() ) echo 'class="current_page_item"'; ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'extra' ); ?></a></li>
 								<?php }; ?>
 
 								<?php show_page_menu( $menu_class, false, false ); ?>

@@ -1,5 +1,8 @@
 ## Changelog
 
+#### 20181012.1
+Updated for Extra 2.17 updates
+
 #### 20180416.1
 * Tested with 4.9
 
